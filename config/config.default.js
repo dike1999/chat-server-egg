@@ -56,6 +56,10 @@ module.exports = appInfo => {
     locale: 'zh-cn',
     throwError: true,
   };
+  // 加密
+  config.crypto = {
+    secret: 'so@sfnmka#%&fgdko@9433sfdjidike',
+  };
 
   // add your user config here
   const userConfig = {
