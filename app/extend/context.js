@@ -9,4 +9,12 @@ module.exports = {
     this.status = code;
     this.body = { msg, data };
   },
+  // 生成token
+  getToken(value) {
+    return this.app.jwt.sign(value, this.app.config.jwt.secret);
+  },
+  // 验证token
+  checkToken(token) {
+    return this.app.jwt.verify(token, this.app.config.jwt.secret);
+  },
 };
